@@ -1,0 +1,392 @@
+/* ========================================
+   HSC Software Engineering - Extended CSS
+   Programming for the Web Focus Area
+   ======================================== */
+
+/* 1. RESET & BASE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. CSS CUSTOM PROPERTIES (Variables) */
+:root {
+    --color-primary: #667eea;
+    --color-secondary: #764ba2;
+    --color-success: #28a745;
+    --color-warning: #ffc107;
+    --color-danger: #dc3545;
+    --color-light: #e3f2fd;
+    --color-dark: #2c3e50;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --transition: all 0.3s ease;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 3. BODY & GENERAL STYLES */
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--color-dark);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* 4. HEADER STYLES */
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 40px;
+    box-shadow: var(--shadow);
+}
+
+header h1 {
+    color: var(--color-primary);
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header p {
+    color: #666;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+header .subtitle {
+    color: var(--color-secondary);
+    font-size: 1em;
+    font-weight: 600;
+}
+
+/* 5. MAIN CONTENT CONTAINER */
+main {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 50px;
+    border-radius: 15px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    box-shadow: var(--shadow);
+}
+
+/* 6. SECTION STYLES */
+section {
+    margin-bottom: 50px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid #eee;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+section h2 {
+    color: var(--color-secondary);
+    font-size: 2.2em;
+    border-bottom: 4px solid var(--color-primary);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+section h3 {
+    color: var(--color-primary);
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+section ul {
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+section ul li {
+    margin: 10px 0;
+    font-size: 1.05em;
+    line-height: 1.8;
+}
+
+/* 7. EXERCISE CONTAINER STYLES */
+.exercise-container {
+    background: linear-gradient(to bottom, #f9f9f9, #f0f0f0);
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid var(--color-primary);
+    margin: 30px 0;
+}
+
+.exercise-description {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 1.05em;
+}
+
+/* 8. EXERCISE CONTROLS & INPUT STYLES */
+.exercise-controls {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 2px solid #eee;
+}
+
+.exercise-controls label {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: 600;
+    color: var(--color-dark);
+    min-width: 150px;
+    margin-bottom: 10px;
+}
+
+.exercise-controls input[type="text"],
+.exercise-controls input[type="number"],
+.exercise-controls select {
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    margin: 10px 10px 10px 0;
+    font-family: var(--font-family);
+    transition: var(--transition);
+    min-width: 200px;
+}
+
+.exercise-controls input:focus,
+.exercise-controls select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+}
+
+.exercise-controls input[type="text"]::placeholder,
+.exercise-controls input[type="number"]::placeholder {
+    color: #ccc;
+}
+
+/* 9. BUTTON STYLES */
+button {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px 10px 10px 0;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    font-family: var(--font-family);
+}
+
+button:hover {
+    background-color: var(--color-secondary);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Different button styles */
+.btn-secondary {
+    background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.btn-math {
+    background-color: var(--color-success);
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+.btn-math:hover {
+    background-color: #218838;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+/* 10. OUTPUT BOX STYLES */
+.output-box {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 3px dashed #ddd;
+    min-height: 120px;
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-top: 20px;
+    position: relative;
+}
+
+.output-box p {
+    margin: 10px 0;
+}
+
+.output-box.style-demo {
+    background: linear-gradient(135deg, var(--color-light) 0%, #f5f5f5 100%);
+    transition: var(--transition);
+}
+
+/* 11. UTILITY CLASSES FOR OUTPUT */
+.success {
+    color: var(--color-success);
+    font-weight: bold;
+}
+
+.error {
+    color: var(--color-danger);
+    font-weight: bold;
+}
+
+.warning {
+    color: var(--color-warning);
+    font-weight: bold;
+}
+
+.info {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.highlight {
+    background-color: #fff3cd;
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 4px solid var(--color-warning);
+    margin: 10px 0;
+}
+
+/* 12. FOOTER STYLES */
+footer {
+    text-align: center;
+    color: white;
+    padding: 30px 20px;
+    font-size: 1em;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+/* 13. RESPONSIVE DESIGN FOR MOBILE */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    section {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+    }
+
+    .exercise-controls {
+        padding: 15px;
+    }
+
+    .exercise-controls label {
+        display: block;
+        margin-bottom: 8px;
+        min-width: auto;
+    }
+
+    .exercise-controls input[type="text"],
+    .exercise-controls input[type="number"],
+    .exercise-controls select {
+        min-width: 100%;
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .button-group button {
+        width: 100%;
+    }
+}
+
+/* 14. ANIMATION CLASSES */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.3s ease-out;
+}
+
+/* 15. ADDITIONAL UTILITY STYLES */
+.center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.text-large {
+    font-size: 1.3em;
+}
+
+.text-small {
+    font-size: 0.9em;
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Interactive Learning - HSC Programming for the Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- HEADER SECTION -->
+    <header>
+        <h1>🚀 JavaScript Interactive Learning Platform</h1>
+        <p>HSC Software Engineering - Programming for the Web Focus Area</p>
+        <p class="subtitle">Learn Client-Side Web Development with Hands-On Exercises</p>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <main>
+        <!-- SECTION 1: WELCOME & INTRODUCTION -->
+        <section id="welcome-section" class="lesson-section">
+            <h2>Welcome to JavaScript Learning</h2>
+            <p>This platform teaches you how to make HTML pages interactive using JavaScript. Each exercise below will help you understand:</p>
+            <ul>
+                <li>How JavaScript interacts with HTML (DOM Manipulation)</li>
+                <li>How to respond to user events (Event Handling)</li>
+                <li>How to store and work with data (Variables & Data Types)</li>
+                <li>How to make decisions and repeat actions (Conditionals & Loops)</li>
+                <li>How to organize code into functions (Functions & Code Reusability)</li>
+            </ul>
+        </section>
+
+        <!-- SECTION 2: EXERCISE 1 - BUTTON CLICK & SIMPLE OUTPUT -->
+        <section id="exercise-1" class="lesson-section exercise-container">
+            <h3>Exercise 1: Button Click & Output</h3>
+            <p class="exercise-description">Learn how to respond to user clicks and display messages.</p>
+
+            <div class="exercise-controls">
+                <button id="btn-show-message">Click Me!</button>
+                <button id="btn-reset-message" class="btn-secondary">Reset</button>
+            </div>
+
+            <div id="output-1" class="output-box">
+                <p>Your message will appear here...</p>
+            </div>
+        </section>
+
+        <!-- SECTION 3: EXERCISE 2 - USER INPUT & VARIABLES -->
+        <section id="exercise-2" class="lesson-section exercise-container">
+            <h3>Exercise 2: Variables & User Input</h3>
+            <p class="exercise-description">Learn how to store data in variables and use it.</p>
+
+            <div class="exercise-controls">
+                <label for="user-name">Enter your name:</label>
+                <input type="text" id="user-name" placeholder="Type your name here">
+                <button id="btn-greet">Say Hello</button>
+                <button id="btn-reset-greet" class="btn-secondary">Clear</button>
+            </div>
+
+            <div id="output-2" class="output-box">
+                <p>Greeting will appear here...</p>
+            </div>
+        </section>
+
+        <!-- SECTION 4: EXERCISE 3 - NUMBERS & ARITHMETIC -->
+        <section id="exercise-3" class="lesson-section exercise-container">
+            <h3>Exercise 3: Math Operations & Number Handling</h3>
+            <p class="exercise-description">Learn how to perform calculations with numbers.</p>
+
+            <div class="exercise-controls">
+                <label for="num-1">Number 1:</label>
+                <input type="number" id="num-1" placeholder="Enter first number" value="0">
+
+                <label for="num-2">Number 2:</label>
+                <input type="number" id="num-2" placeholder="Enter second number" value="0">
+
+                <div class="button-group">
+                    <button id="btn-add" class="btn-math">Add (+)</button>
+                    <button id="btn-subtract" class="btn-math">Subtract (-)</button>
+                    <button id="btn-multiply" class="btn-math">Multiply (×)</button>
+                    <button id="btn-divide" class="btn-math">Divide (÷)</button>
+                </div>
+                <button id="btn-reset-math" class="btn-secondary">Clear</button>
+            </div>
+
+            <div id="output-3" class="output-box">
+                <p>Calculation results will appear here...</p>
+            </div>
+        </section>
+
+        <!-- SECTION 5: EXERCISE 4 - CONDITIONALS (IF/ELSE) -->
+        <section id="exercise-4" class="lesson-section exercise-container">
+            <h3>Exercise 4: Conditionals (Making Decisions)</h3>
+            <p class="exercise-description">Learn how to make decisions based on conditions.</p>
+
+            <div class="exercise-controls">
+                <label for="age-input">Enter your age:</label>
+                <input type="number" id="age-input" placeholder="Enter age" value="0">
+                <button id="btn-check-age">Check Eligibility</button>
+                <button id="btn-reset-age" class="btn-secondary">Clear</button>
+            </div>
+
+            <div id="output-4" class="output-box">
+                <p>Eligibility result will appear here...</p>
+            </div>
+        </section>
+
+        <!-- SECTION 6: EXERCISE 5 - LOOPS & LISTS -->
+        <section id="exercise-5" class="lesson-section exercise-container">
+            <h3>Exercise 5: Loops & Creating Lists</h3>
+            <p class="exercise-description">Learn how to repeat actions and build dynamic lists.</p>
+
+            <div class="exercise-controls">
+                <label for="loop-count">How many items?</label>
+                <input type="number" id="loop-count" placeholder="Enter number (1-10)" value="5" min="1" max="10">
+                <button id="btn-generate-list">Generate List</button>
+                <button id="btn-reset-list" class="btn-secondary">Clear</button>
+            </div>
+
+            <div id="output-5" class="output-box">
+                <p>List will appear here...</p>
+            </div>
+        </section>
+
+        <!-- SECTION 7: EXERCISE 6 - FUNCTIONS & REUSABLE CODE -->
+        <section id="exercise-6" class="lesson-section exercise-container">
+            <h3>Exercise 6: Functions (Code Reusability)</h3>
+            <p class="exercise-description">Learn how to create reusable code with functions.</p>
+
+            <div class="exercise-controls">
+                <label for="word-input">Enter a word:</label>
+                <input type="text" id="word-input" placeholder="Type a word">
+                <button id="btn-analyze-word">Analyze Word</button>
+                <button id="btn-reset-word" class="btn-secondary">Clear</button>
+            </div>
+
+            <div id="output-6" class="output-box">
+                <p>Word analysis will appear here...</p>
+            </div>
+        </section>
+
+        <!-- SECTION 8: EXERCISE 7 - ARRAYS & ITERATION -->
+        <section id="exercise-7" class="lesson-section exercise-container">
+            <h3>Exercise 7: Arrays & Working with Collections</h3>
+            <p class="exercise-description">Learn how to store multiple values and work with them.</p>
+
+            <div class="exercise-controls">
+                <label for="student-grade">Enter a grade (A-F):</label>
+                <input type="text" id="student-grade" placeholder="A, B, C, D, or F" maxlength="1">
+                <button id="btn-add-grade">Add Grade</button>
+                <button id="btn-show-stats">Show Statistics</button>
+                <button id="btn-reset-grades" class="btn-secondary">Reset Grades</button>
+            </div>
+
+            <div id="output-7" class="output-box">
+                <p>Grade statistics will appear here...</p>
+            </div>
+        </section>
+
+        <!-- SECTION 9: EXERCISE 8 - DOM MANIPULATION & STYLING -->
+        <section id="exercise-8" class="lesson-section exercise-container">
+            <h3>Exercise 8: DOM Manipulation & Dynamic Styling</h3>
+            <p class="exercise-description">Learn how to change HTML content and styles using JavaScript.</p>
+
+            <div class="exercise-controls">
+                <label for="bg-color">Choose a color:</label>
+                <select id="bg-color">
+                    <option value="--color-light">Light Blue</option>
+                    <option value="--color-dark">Dark Purple</option>
+                    <option value="--color-success">Green</option>
+                    <option value="--color-warning">Orange</option>
+                    <option value="--color-danger">Red</option>
+                </select>
+                <button id="btn-change-style">Apply Style</button>
+                <button id="btn-reset-style" class="btn-secondary">Reset</button>
+            </div>
+
+            <div id="output-8" class="output-box style-demo">
+                <p>This box will change its appearance!</p>
+            </div>
+        </section>
+
+        <!-- SECTION 10: EXERCISE 9 - KEYBOARD EVENTS -->
+        <section id="exercise-9" class="lesson-section exercise-container">
+            <h3>Exercise 9: Keyboard Events & Real-Time Interaction</h3>
+            <p class="exercise-description">Learn how to respond to keyboard input as users type.</p>
+
+            <div class="exercise-controls">
+                <label for="text-counter">Type something:</label>
+                <input type="text" id="text-counter" placeholder="Type here and watch the counter...">
+            </div>
+
+            <div id="output-9" class="output-box">
+                <p>Characters typed: <span id="char-count">0</span></p>
+                <p>Words typed: <span id="word-count">0</span></p>
+            </div>
+        </section>
+
+        <!-- SECTION 11: EXERCISE 10 - INTERACTIVE QUIZ -->
+        <section id="exercise-10" class="lesson-section exercise-container">
+            <h3>Exercise 10: Interactive Quiz (Combining Everything)</h3>
+            <p class="exercise-description">A complete exercise using multiple JavaScript concepts together.</p>
+
+            <div class="exercise-controls">
+                <div id="quiz-container">
+                    <p id="quiz-question">Question will appear here...</p>
+                    <div id="quiz-options"></div>
+                    <button id="btn-submit-answer">Submit Answer</button>
+                    <button id="btn-next-question">Next Question</button>
+                    <button id="btn-reset-quiz" class="btn-secondary">Start Over</button>
+                </div>
+            </div>
+
+            <div id="output-10" class="output-box">
+                <p>Quiz progress will appear here...</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        <p>&copy; 2025 HSC Software Engineering - Programming for the Web</p>
+        <p>Open the Browser Console (F12) to see detailed explanations of what's happening!</p>
+    </footer>
+
+    <!-- JAVASCRIPT FILE - This connects all interactivity -->
+    <script src="script.js"></script>
+</body>
+</html>
